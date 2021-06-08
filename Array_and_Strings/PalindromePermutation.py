@@ -44,4 +44,4 @@ print(res)
 res = palindromePermutation("Reem")
 print(res)
 
-### Time Complexity = O (N) time, where N is the length of the string
+### Time Complexity = O(n) time, where n is the length of the string
