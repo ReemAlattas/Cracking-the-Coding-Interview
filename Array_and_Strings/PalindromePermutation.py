@@ -5,9 +5,9 @@
 ### Output: True (Permutations: taco, cat, atco cta, ... etc)
 
 def palindromePermutation(s):
-  # convert s to lowercase
-  s = s.lower()
-  # print(s)
+  # convert s to lowercase and remove whitespaces
+  s = s.lower().replace(" ", "")
+  # print(s, len(s))
 
   # create a dictionary to count character frequency
   s_dict = {}
