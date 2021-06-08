@@ -1,4 +1,4 @@
-### Replace all spaces in a string with '%20'.
+### Question: Replace all spaces in a string with '%20'.
 
 def urlify(s, n):
   ### s is the input string

@@ -1,4 +1,4 @@
-### Given 2 strings, write a method to decide if one is a permutation of the other ###
+### Question: Given 2 strings, write a method to decide if one is a permutation of the other.
 
 def checkPerm(s1, s2):
 

@@ -1,6 +1,4 @@
-###
-# Implement an algorithm to determine if a string has all unique charaters.
-###
+### Question: Implement an algorithm to determine if a string has all unique charaters.
 
 ### 1 - Solution using dictionary data structure
 
