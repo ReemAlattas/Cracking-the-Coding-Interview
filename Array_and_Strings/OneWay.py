@@ -32,3 +32,5 @@ def oneAway(s1, s2):
 print(oneAway("pale", "ple"))
 print(oneAway("pales", "pale"))
 print(oneAway("pale", "bae"))
+
+### Time Complexity = O(n)
