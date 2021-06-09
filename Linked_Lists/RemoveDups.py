@@ -57,3 +57,15 @@ removeDups(llist)
 llist.printList()
 
 ### How to solve this if a temporary buffer is not allowed.
+
+def removeDups_noTemp(ll):
+  runner = current = ll.head
+  while current:
+      runner = current
+      while runner.next:
+          if runner.next.data == current.data:
+              runner.next = runner.next.next
+          else:
+              runner = runner.next
+      current = current.next
+  return ll
