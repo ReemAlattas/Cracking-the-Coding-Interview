@@ -25,6 +25,8 @@ class LinkedList:
       temp = temp.next
     print(res)
   
+### Solution 1: Iteration and an array
+
 def kthToLast(ll, k):
   length = 0
   arr = []
@@ -39,6 +41,32 @@ def kthToLast(ll, k):
     k = 1
   return arr[length-k]
 
+### Solution 2: Iteration without additional data structure
+
+def kthToLast_no_arr(ll, k):
+  p1 = ll.head
+  p2 = ll.head
+
+  if k == 0:
+    k = 1
+
+  # move p1 to the kth element
+  for _ in range(k):
+    if p1 == None:
+      return -1
+    p1 = p1.next
+
+  # move p1 and p2. When p1 hits the end, p2 hit the Kth to last elemnt
+
+  while p1:
+    p1 = p1.next
+    p2 = p2.next
+  
+  return p2.data
+
+
+###
+
 llist = LinkedList()
  
 llist.head = Node(1)
@@ -51,9 +79,16 @@ second.next = third # Link second node with the third node
 third.next = fourth
 
 llist.printList()
-print(kthToLast(llist, 0))
-print(kthToLast(llist, 1))
-print(kthToLast(llist, 2))
+
+# print(kthToLast(llist, 0))
+# print(kthToLast(llist, 1))
+# print(kthToLast(llist, 2))
+
+print(kthToLast_no_arr(llist, 0))
+print(kthToLast_no_arr(llist, 1))
+print(kthToLast_no_arr(llist, 2))
+
+
 
 ### Time complexity = O(n)
 ### Space Complexity = O(n)
