@@ -1,4 +1,4 @@
-### Question: Remove duplicates from unsorted linked list.
+### Question: Return the kth to last element in a singly linked list. K = 0 and K = 1 will return the last element
 
 # Node class
 class Node:
@@ -25,18 +25,32 @@ class LinkedList:
       temp = temp.next
     print(res)
   
-def kthToLast(ll):
-  pass
+def kthToLast(ll, k):
+  length = 0
+  arr = []
+  current = ll.head
+
+  while current:
+    arr.append(current.data)
+    length += 1
+    current = current.next
+
+  if k == 0:
+    k = 1
+  return arr[length-k]
 
 llist = LinkedList()
  
 llist.head = Node(1)
 second = Node(2)
-third = Node(2)
-fourth = Node(3)
+third = Node(3)
+fourth = Node(4)
 
 llist.head.next = second # Link first node with second
 second.next = third # Link second node with the third node
 third.next = fourth
 
 llist.printList()
+print(kthToLast(llist, 0))
+print(kthToLast(llist, 1))
+print(kthToLast(llist, 2))
