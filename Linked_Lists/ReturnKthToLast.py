@@ -54,3 +54,6 @@ llist.printList()
 print(kthToLast(llist, 0))
 print(kthToLast(llist, 1))
 print(kthToLast(llist, 2))
+
+### Time complexity = O(n)
+### Space Complexity = O(n)
